@@ -15,7 +15,26 @@
 	<div id="output"></div>
 	<center>
 		<input type="text" name="message" id="message">
-		<button>send</button>
+		<button id="button">send</button>
 	</center>
+
+
+	<script type="text/javascript">
+		var name = prompt("What is your name");
+		var output=document.getElementById("output");
+		var webSocket=new WebSocket("ws//localhost:3000");
+
+		webSocket.onopen=function(){
+			webSocket.send({type:"name",data:name});
+		}
+		webSocket.onmessage=function(event){
+			output.innerHTML +=event +"</br>"; 
+		}
+		document.getElementById('button').onclick=function(){
+			let message=document.getElementById('message');
+			webSocket.send({type:"message",data:message});
+			output.innerHTML +="You: "+ message +"</br>"; 
+		}
+	</script>
 </body>
 </html>
