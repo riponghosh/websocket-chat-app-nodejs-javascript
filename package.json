@@ -1,0 +1,23 @@
+{
+  "name": "websocket-chat-app-nodejs-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riponghosh/websocket-chat-app-nodejs-javascript.git"
+  },
+  "author": "Ripon Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riponghosh/websocket-chat-app-nodejs-javascript/issues"
+  },
+  "homepage": "https://github.com/riponghosh/websocket-chat-app-nodejs-javascript#readme",
+  "dependencies": {
+    "ws": "^7.0.0"
+  }
+}
